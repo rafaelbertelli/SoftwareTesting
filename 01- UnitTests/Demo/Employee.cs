@@ -25,7 +25,7 @@ namespace Demo
 
         public void SetSeniority(double payment)
         {
-            if (payment <= 500)
+            if (payment < 500)
             {
                 throw new Exception("Less than allowed payment");
             }
@@ -62,7 +62,7 @@ namespace Demo
                     break;
                 case Seniority.Senior:
                     Skills.Add("Tests");
-                    Skills.Add("Micro services");
+                    Skills.Add("Microservices");
                     break;
             }
         }

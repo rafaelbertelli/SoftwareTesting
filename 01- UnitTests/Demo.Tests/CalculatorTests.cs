@@ -48,5 +48,15 @@ namespace Demo.Tests
             // Assert
             Assert.NotEqual(expected: 3, actual: result, precision: 1);
         }
+
+        [Fact]
+        public void Calculator_Division_ShouldThrowErrorOnZeroDivision()
+        {
+            // Arrange
+            var sut = new Calculator();
+
+            // Act & Assert
+            Assert.Throws<DivideByZeroException>(testCode: () => sut.Division(10, 0));
+        }
     }
 }
