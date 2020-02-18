@@ -35,5 +35,18 @@ namespace Demo.Tests
             // Assert
             Assert.Equal(expected: total, actual: result);
         }
+
+        [Fact]
+        public void Calculator_Sum_ShoulNotBeEqual()
+        {
+            // Arrange
+            var sut = new Calculator();
+
+            // Act
+            var result = sut.Sum(1.13123123123, 2.2312313123);
+
+            // Assert
+            Assert.NotEqual(expected: 3, actual: result, precision: 1);
+        }
     }
 }
